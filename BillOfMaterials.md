@@ -2,3 +2,7 @@
 # Bill Of Materials 
  |Part|Number Needed|Price|Source| 
  |----|----------|-----|-----|
+|Acer R240HY|1|$129.99|[Amazon](https://www.amazon.com/Acer-R240HY-bidx-23-8-Inch-Widescreen/dp/B0148NNKTC?tag=maslowcnc01-20)|
+|Total: |1|$129.99| |
+
+ 3xCOG MSRP: $389.97

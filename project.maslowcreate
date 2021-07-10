@@ -8,15 +8,118 @@
     "topLevel": true,
     "allAtoms": [
         {
+            "atomType": "Rectangle",
+            "name": "Rectangle",
+            "x": 0.13777777777777778,
+            "y": 0.4312977099236641,
+            "uniqueID": 304893,
+            "ioValues": [
+                {
+                    "name": "x length",
+                    "ioValue": 21.3
+                },
+                {
+                    "name": "y length",
+                    "ioValue": 16
+                }
+            ]
+        },
+        {
+            "atomType": "Extrude",
+            "name": "Extrude",
+            "x": 0.3111111111111111,
+            "y": 0.4465648854961832,
+            "uniqueID": 951396,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "atoms/463591/304893Rectangle"
+                },
+                {
+                    "name": "height",
+                    "ioValue": 2
+                }
+            ]
+        },
+        {
+            "atomType": "Color",
+            "name": "Color",
+            "x": 0.46044444444444443,
+            "y": 0.4198473282442748,
+            "uniqueID": 988829,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "atoms/463591/951396Extrude"
+                }
+            ],
+            "selectedColorIndex": "11"
+        },
+        {
+            "atomType": "Add-BOM-Tag",
+            "name": "Add BOM Tag",
+            "x": 0.712,
+            "y": 0.4427480916030534,
+            "uniqueID": 653939,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "atoms/463591/988829Color"
+                }
+            ],
+            "BOMitem": {
+                "BOMitemName": "Acer R240HY",
+                "numberNeeded": 1,
+                "costUSD": 129.99,
+                "source": "https://www.amazon.com/Acer-R240HY-bidx-23-8-Inch-Widescreen/dp/B0148NNKTC",
+                "totalNeeded": 1,
+                "radius": 0.015384615384615385
+            }
+        },
+        {
             "atomType": "Output",
             "name": "Output",
             "x": 0.9822222222222223,
             "y": 0.5,
             "uniqueID": 543642,
-            "ioValues": []
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": "atoms/463591/653939Add-BOM-Tag"
+                }
+            ]
         }
     ],
-    "allConnectors": [],
+    "allConnectors": [
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 304893,
+            "ap2ID": 951396
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 951396,
+            "ap2ID": 988829
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 988829,
+            "ap2ID": 653939
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 653939,
+            "ap2ID": 543642
+        }
+    ],
     "fileTypeVersion": 1,
     "simplify": false,
     "filetypeVersion": 1,
